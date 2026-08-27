@@ -26,7 +26,7 @@
 	- The patched `control` file gets saved and its permissions are restored to the original ones.
 - All of the relevant `.plist` files have their paths converted. Same steps as before, the file permissions are stored, the file's paths get converted, the file is saved and its permissions are restored.
 - All of the non-Mach-O script files have their paths converted. Same steps as before, the file permissions are stored, the file's paths get converted, the file is saved and its permissions are restored.
-- Some special handling is done for certain tweaks (e.g. XenHTML). These tweaks have an improper `DEBIAN` directory structure, which causes `dpkg-deb` to not be able to repack th .deb correctly. `rootless-patcher` fixes this structure to correspond to `dpkg-deb`'s format.
+- Some special handling is done for certain tweaks (e.g. XenHTML). These tweaks have an improper `DEBIAN` directory structure, which causes `dpkg-deb` to not be able to repack the .deb correctly. `rootless-patcher` fixes this structure to correspond to `dpkg-deb`'s format.
 - `dpkg-deb` is used to repack the .deb file with the converted name.
 - The temporary working directory is deleted.
 ## Development challenges
